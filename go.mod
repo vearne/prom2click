@@ -9,7 +9,7 @@ require (
 	github.com/golang/protobuf v1.4.2
 	github.com/golang/snappy v0.0.0-20170215233205-553a64147049
 	github.com/jmoiron/sqlx v1.2.0
-	github.com/kshvakov/clickhouse v0.0.0-20170608083556-1250f4e0c94a
+	github.com/kshvakov/clickhouse v0.0.0-20170608083556-1250f4e0c94a // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/onsi/ginkgo v1.14.2 // indirect
 	github.com/onsi/gomega v1.10.4 // indirect

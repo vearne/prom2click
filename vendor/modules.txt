@@ -1,0 +1,138 @@
+# github.com/ClickHouse/clickhouse-go v1.4.3
+## explicit
+github.com/ClickHouse/clickhouse-go
+github.com/ClickHouse/clickhouse-go/lib/binary
+github.com/ClickHouse/clickhouse-go/lib/cityhash102
+github.com/ClickHouse/clickhouse-go/lib/column
+github.com/ClickHouse/clickhouse-go/lib/data
+github.com/ClickHouse/clickhouse-go/lib/leakypool
+github.com/ClickHouse/clickhouse-go/lib/lz4
+github.com/ClickHouse/clickhouse-go/lib/protocol
+github.com/ClickHouse/clickhouse-go/lib/types
+github.com/ClickHouse/clickhouse-go/lib/writebuffer
+# github.com/Sirupsen/logrus v1.0.0
+## explicit
+github.com/Sirupsen/logrus
+# github.com/beorn7/perks v0.0.0-20160804104726-4c0e84591b9a
+## explicit
+github.com/beorn7/perks/quantile
+# github.com/cloudflare/golz4 v0.0.0-20150217214814-ef862a3cdc58
+github.com/cloudflare/golz4
+# github.com/golang/protobuf v1.4.2
+## explicit
+github.com/golang/protobuf/proto
+# github.com/golang/snappy v0.0.0-20170215233205-553a64147049
+## explicit
+github.com/golang/snappy
+# github.com/jmoiron/sqlx v1.2.0
+## explicit
+github.com/jmoiron/sqlx
+github.com/jmoiron/sqlx/reflectx
+# github.com/kshvakov/clickhouse v0.0.0-20170608083556-1250f4e0c94a
+## explicit
+# github.com/matttproud/golang_protobuf_extensions v1.0.1
+## explicit
+github.com/matttproud/golang_protobuf_extensions/pbutil
+# github.com/onsi/ginkgo v1.14.2
+## explicit
+# github.com/onsi/gomega v1.10.4
+## explicit
+# github.com/opentracing/opentracing-go v1.0.3-0.20170506182758-eaaf4e1eeb7a
+## explicit
+github.com/opentracing/opentracing-go
+github.com/opentracing/opentracing-go/log
+# github.com/prometheus/client_golang v0.8.0
+## explicit
+github.com/prometheus/client_golang/prometheus
+# github.com/prometheus/client_model v0.0.0-20170216185247-6f3806018612
+## explicit
+github.com/prometheus/client_model/go
+# github.com/prometheus/common v0.0.0-20170427095455-13ba4ddd0caa
+## explicit
+github.com/prometheus/common/expfmt
+github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg
+github.com/prometheus/common/log
+github.com/prometheus/common/model
+# github.com/prometheus/procfs v0.0.0-20170609123208-a3bfc74126ea
+## explicit
+github.com/prometheus/procfs
+github.com/prometheus/procfs/xfs
+# github.com/prometheus/prometheus v1.7.0
+## explicit
+github.com/prometheus/prometheus/config
+github.com/prometheus/prometheus/relabel
+github.com/prometheus/prometheus/storage
+github.com/prometheus/prometheus/storage/local
+github.com/prometheus/prometheus/storage/local/chunk
+github.com/prometheus/prometheus/storage/local/codable
+github.com/prometheus/prometheus/storage/local/index
+github.com/prometheus/prometheus/storage/metric
+github.com/prometheus/prometheus/storage/remote
+github.com/prometheus/prometheus/util/flock
+github.com/prometheus/prometheus/util/httputil
+github.com/prometheus/prometheus/util/testutil
+# github.com/stretchr/testify v1.6.1
+## explicit
+# github.com/syndtr/goleveldb v0.0.0-20170409015612-8c81ea47d4c4
+## explicit
+github.com/syndtr/goleveldb/leveldb
+github.com/syndtr/goleveldb/leveldb/cache
+github.com/syndtr/goleveldb/leveldb/comparer
+github.com/syndtr/goleveldb/leveldb/errors
+github.com/syndtr/goleveldb/leveldb/filter
+github.com/syndtr/goleveldb/leveldb/iterator
+github.com/syndtr/goleveldb/leveldb/journal
+github.com/syndtr/goleveldb/leveldb/memdb
+github.com/syndtr/goleveldb/leveldb/opt
+github.com/syndtr/goleveldb/leveldb/storage
+github.com/syndtr/goleveldb/leveldb/table
+github.com/syndtr/goleveldb/leveldb/util
+# golang.org/x/net v0.0.0-20201202161906-c7110b5ffcbb
+golang.org/x/net/context
+golang.org/x/net/context/ctxhttp
+# golang.org/x/sys v0.0.0-20200930185726-fdedc70b468f
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+golang.org/x/sys/windows/registry
+golang.org/x/sys/windows/svc/eventlog
+# golang.org/x/text v0.3.4
+## explicit
+# golang.org/x/time v0.0.0-20170424234030-8be79e1e0910
+## explicit
+golang.org/x/time/rate
+# google.golang.org/protobuf v1.23.0
+google.golang.org/protobuf/encoding/prototext
+google.golang.org/protobuf/encoding/protowire
+google.golang.org/protobuf/internal/descfmt
+google.golang.org/protobuf/internal/descopts
+google.golang.org/protobuf/internal/detrand
+google.golang.org/protobuf/internal/encoding/defval
+google.golang.org/protobuf/internal/encoding/messageset
+google.golang.org/protobuf/internal/encoding/tag
+google.golang.org/protobuf/internal/encoding/text
+google.golang.org/protobuf/internal/errors
+google.golang.org/protobuf/internal/fieldnum
+google.golang.org/protobuf/internal/fieldsort
+google.golang.org/protobuf/internal/filedesc
+google.golang.org/protobuf/internal/filetype
+google.golang.org/protobuf/internal/flags
+google.golang.org/protobuf/internal/genname
+google.golang.org/protobuf/internal/impl
+google.golang.org/protobuf/internal/mapsort
+google.golang.org/protobuf/internal/pragma
+google.golang.org/protobuf/internal/set
+google.golang.org/protobuf/internal/strs
+google.golang.org/protobuf/internal/version
+google.golang.org/protobuf/proto
+google.golang.org/protobuf/reflect/protoreflect
+google.golang.org/protobuf/reflect/protoregistry
+google.golang.org/protobuf/runtime/protoiface
+google.golang.org/protobuf/runtime/protoimpl
+# gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
+## explicit
+# gopkg.in/tylerb/graceful.v1 v1.2.15
+## explicit
+gopkg.in/tylerb/graceful.v1
+# gopkg.in/yaml.v2 v2.3.0
+gopkg.in/yaml.v2
