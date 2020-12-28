@@ -2,18 +2,17 @@ package main
 
 import (
 	"bytes"
-	"database/sql"
 	"errors"
 	"fmt"
-	"strings"
-
+	"github.com/jmoiron/sqlx"
 	"github.com/prometheus/common/model"
 	"github.com/prometheus/prometheus/storage/remote"
+	"strings"
 )
 
 type p2cReader struct {
 	conf *config
-	db   *sql.DB
+	db   *sqlx.DB
 }
 
 // getTimePeriod return select and where SQL chunks relating to the time period -or- error
@@ -156,7 +155,7 @@ func NewP2CReader(conf *config) (*p2cReader, error) {
 	var err error
 	r := new(p2cReader)
 	r.conf = conf
-	r.db, err = sql.Open("clickhouse", r.conf.ChDSN)
+	r.db, err = sqlx.Open("clickhouse", r.conf.ChDSN)
 	if err != nil {
 		fmt.Printf("Error connecting to clickhouse: %s\n", err.Error())
 		return r, err
@@ -168,7 +167,7 @@ func NewP2CReader(conf *config) (*p2cReader, error) {
 func (r *p2cReader) Read(req *remote.ReadRequest) (*remote.ReadResponse, error) {
 	var err error
 	var sqlStr string
-	var rows *sql.Rows
+	var rows *sqlx.Rows
 
 	resp := remote.ReadResponse{
 		Results: []*remote.QueryResult{
@@ -199,7 +198,7 @@ func (r *p2cReader) Read(req *remote.ReadRequest) (*remote.ReadResponse, error) 
 		}
 
 		// todo: metrics on number of errors, rows, selects, timings, etc
-		rows, err = r.db.Query(sqlStr)
+		rows, err = r.db.Queryx(sqlStr)
 		if err != nil {
 			fmt.Printf("Error: query failed: %s", sqlStr)
 			fmt.Printf("Error: query error: %s\n", err)

@@ -1,15 +1,14 @@
 package main
 
 import (
-	"database/sql"
 	"fmt"
 	"sort"
 	"time"
 
-	"sync"
-
-	"github.com/kshvakov/clickhouse"
+	"github.com/ClickHouse/clickhouse-go"
+	"github.com/jmoiron/sqlx"
 	"github.com/prometheus/client_golang/prometheus"
+	"sync"
 )
 
 var insertSQL = `INSERT INTO %s.%s
@@ -20,7 +19,7 @@ type p2cWriter struct {
 	conf     *config
 	requests chan *p2cRequest
 	wg       sync.WaitGroup
-	db       *sql.DB
+	db       *sqlx.DB
 	tx       prometheus.Counter
 	ko       prometheus.Counter
 	test     prometheus.Counter
@@ -32,7 +31,7 @@ func NewP2CWriter(conf *config, reqs chan *p2cRequest) (*p2cWriter, error) {
 	w := new(p2cWriter)
 	w.conf = conf
 	w.requests = reqs
-	w.db, err = sql.Open("clickhouse", w.conf.ChDSN)
+	w.db, err = sqlx.Open("clickhouse", w.conf.ChDSN)
 	if err != nil {
 		fmt.Printf("Error connecting to clickhouse: %s\n", err.Error())
 		return w, err
